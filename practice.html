@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Practice QA skills with test case writing exercises, bug finding challenges, and scenario-based questions.">
+    <title>QA Practice Zone - Test Your Skills</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="logo">QA Learning Hub</div>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="roadmap.html" class="nav-link">QA Roadmap</a></li>
+                    <li class="nav-item"><a href="manual-testing.html" class="nav-link">Manual Testing</a></li>
+                    <li class="nav-item"><a href="api-testing.html" class="nav-link">API Testing</a></li>
+                    <li class="nav-item"><a href="automation.html" class="nav-link">Automation</a></li>
+                    <li class="nav-item"><a href="practice.html" class="nav-link">Practice Zone</a></li>
+                    <li class="nav-item"><a href="interview.html" class="nav-link">Interview Prep</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">Resume & Career</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1>Practice Zone</h1>
+            <p>Test your QA skills with practical exercises</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+
+            <p class="text-center text-muted mb-xl">Practice makes perfect! Work through these exercises to sharpen your
+                QA skills. Don't rush—take your time to think like a real QA professional.</p>
+
+            <!-- Test Case Writing Exercise -->
+            <div class="mb-xl">
+                <h2>📝 Test Case Writing Exercises</h2>
+                <p>Practice writing test cases for these scenarios. Focus on clear steps, expected results, and edge
+                    cases.</p>
+
+                <div class="card">
+                    <h3>Exercise 1: Login Functionality</h3>
+                    <p><strong>Scenario:</strong> Test the login page of a banking application.</p>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>Username field (email format required)</li>
+                        <li>Password field (min 8 characters, must contain uppercase, lowercase, number)</li>
+                        <li>"Remember Me" checkbox</li>
+                        <li>"Login" button</li>
+                        <li>"Forgot Password" link</li>
+                    </ul>
+                    <p><strong>Your Task:</strong> Write at least 8 test cases covering:</p>
+                    <ul>
+                        <li>Valid login</li>
+                        <li>Invalid username/password combinations</li>
+                        <li>Empty fields</li>
+                        <li>Password visibility toggle (if applicable)</li>
+                        <li>Remember me functionality</li>
+                        <li>Forgot password link</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>Exercise 2: E-commerce Search</h3>
+                    <p><strong>Scenario:</strong> Test the search functionality on an e-commerce website.</p>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>Search bar with placeholder "Search products..."</li>
+                        <li>Auto-suggest dropdown appears after 3 characters</li>
+                        <li>Search button and Enter key both work</li>
+                        <li>Results should show relevant products</li>
+                    </ul>
+                    <p><strong>Your Task:</strong> Write test cases for:</p>
+                    <ul>
+                        <li>Valid product search</li>
+                        <li>Search with no results</li>
+                        <li>Special characters in search</li>
+                        <li>Very long search strings</li>
+                        <li>Auto-suggest behavior</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>Exercise 3: Registration Form</h3>
+                    <p><strong>Scenario:</strong> User registration page for a social media app.</p>
+                    <p><strong>Fields:</strong> First Name, Last Name, Email, Password, Confirm Password, Date of Birth,
+                        Terms & Conditions checkbox</p>
+                    <p><strong>Your Task:</strong> Write test cases for all field validations, form submission, and
+                        error handling.</p>
+                </div>
+            </div>
+
+            <!-- Bug Finding Challenges -->
+            <div class="mb-xl">
+                <h2>🐛 Bug Finding Challenges</h2>
+                <p>Identify bugs in these real-world scenarios. Think about what could go wrong.</p>
+
+                <div class="card">
+                    <h3>Challenge 1: Shopping Cart Bug</h3>
+                    <p><strong>Scenario:</strong> You're testing an online store's shopping cart.</p>
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Add Product A (Price: $50) to cart</li>
+                        <li>Add Product B (Price: $30) to cart</li>
+                        <li>Cart shows: Total = $50 (Product B is missing!)</li>
+                    </ol>
+                    <p><strong>Your Task:</strong> Write a bug report for this issue. Include severity, priority, steps
+                        to reproduce, expected vs actual results.</p>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>Challenge 2: Mobile App Keyboard Issue</h3>
+                    <p><strong>Scenario:</strong> Testing a chat application on mobile.</p>
+                    <p><strong>Issue Observed:</strong> When user taps on the message input field, the keyboard appears
+                        but covers the input field. User cannot see what they're typing.</p>
+                    <p><strong>Your Task:</strong> Document this as a bug. What severity would you assign? What
+                        priority?</p>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>Challenge 3: Date Picker Bug</h3>
+                    <p><strong>Scenario:</strong> Flight booking website allows selecting departure date.</p>
+                    <p><strong>Issue:</strong> User can select past dates (yesterday, last month). When trying to book,
+                        system shows error "Invalid date".</p>
+                    <p><strong>Your Task:</strong> Why is this a problem? How should it be fixed? Write a bug report
+                        with improvement suggestion.</p>
+                </div>
+            </div>
+
+            <!-- Scenario-Based Questions -->
+            <div class="mb-xl">
+                <h2>🎯 Scenario-Based Questions</h2>
+                <p>These questions test your QA thinking and problem-solving skills.</p>
+
+                <div class="accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Scenario 1: Testing a New Feature with Limited Time</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Question:</strong> Your team is releasing a new payment feature tomorrow. You
+                                    only have 2 hours to test. How do you prioritize?</p>
+                                <p><strong>Think About:</strong></p>
+                                <ul>
+                                    <li>What are the most critical test cases?</li>
+                                    <li>What would you test first?</li>
+                                    <li>What can be skipped if time runs out?</li>
+                                    <li>How would you communicate risks to your manager?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Scenario 2: Bug or Feature Request?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Question:</strong> Users report that the "Export to PDF" button is missing on
+                                    the mobile version of the app, but it exists on the web version. The requirements
+                                    document doesn't mention mobile export. Is this a bug or a feature request?</p>
+                                <p><strong>Think About:</strong></p>
+                                <ul>
+                                    <li>How do you determine if it's a bug or missing feature?</li>
+                                    <li>Who would you ask for clarification?</li>
+                                    <li>How would you document this?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Scenario 3: Production Bug Found by Customer</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Question:</strong> A customer reports that they cannot complete checkout
+                                    because the "Place Order" button is disabled even after filling all required fields.
+                                    This is happening in production. What do you do?</p>
+                                <p><strong>Think About:</strong></p>
+                                <ul>
+                                    <li>What are your immediate actions?</li>
+                                    <li>How do you reproduce the issue?</li>
+                                    <li>Who needs to be notified urgently?</li>
+                                    <li>What information do you need from the customer?</li>
+                                    <li>How do you prevent similar issues in the future?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Scenario 4: Conflicting Test Results</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Question:</strong> You tested a feature and marked it as "Pass." Another QA
+                                    tested the same feature and found a critical bug. What happened?</p>
+                                <p><strong>Think About:</strong></p>
+                                <ul>
+                                    <li>What could cause different test results?</li>
+                                    <li>How do you handle this situation professionally?</li>
+                                    <li>What process improvements can prevent this?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Scenario 5: Developer Says "It Works on My Machine"</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Question:</strong> You report a bug, but the developer responds "It works
+                                    fine on my machine. Cannot reproduce." What do you do?</p>
+                                <p><strong>Think About:</strong></p>
+                                <ul>
+                                    <li>What additional information can you provide?</li>
+                                    <li>How do you prove the bug exists?</li>
+                                    <li>What environmental factors might differ?</li>
+                                    <li>How do you maintain a good relationship with developers?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Dummy App Testing -->
+            <div class="mb-xl">
+                <h2>🖥️ Dummy App Testing Exercises</h2>
+                <p>Practice testing these imaginary applications. Create a test plan for each.</p>
+
+                <div class="card">
+                    <h3>App 1: To-Do List Application</h3>
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>Add new tasks with title and description</li>
+                        <li>Mark tasks as complete/incomplete</li>
+                        <li>Delete tasks</li>
+                        <li>Filter: All, Active, Completed</li>
+                        <li>Tasks persist after browser refresh</li>
+                    </ul>
+                    <p><strong>Your Task:</strong></p>
+                    <ul>
+                        <li>Write a test plan covering all features</li>
+                        <li>List at least 15 test cases</li>
+                        <li>Include positive, negative, and edge case scenarios</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>App 2: Weather Forecast App</h3>
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>Search city by name</li>
+                        <li>Display current temperature, humidity, wind speed</li>
+                        <li>5-day forecast</li>
+                        <li>Toggle between Celsius and Fahrenheit</li>
+                        <li>Save favorite cities</li>
+                    </ul>
+                    <p><strong>Your Task:</strong> What would you test? What API tests would you run? What could go
+                        wrong?</p>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>App 3: Food Delivery App</h3>
+                    <p><strong>User Flow:</strong> Browse restaurants → Select items → Add to cart → Checkout → Track
+                        order</p>
+                    <p><strong>Your Task:</strong></p>
+                    <ul>
+                        <li>Create test cases for the entire user journey</li>
+                        <li>What edge cases exist? (Empty cart, out of stock items, payment failures)</li>
+                        <li>How would you test the order tracking feature?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Real Testing Practice -->
+            <div class="card" style="background: linear-gradient(135deg, #2563eb 0%, #10b981 100%); color: white;">
+                <h3 style="color: white;">🚀 Practice on Real Websites</h3>
+                <p style="color: white;">The best practice is testing real applications. Try these:</p>
+                <ul style="color: white;">
+                    <li style="color: white;"><strong style="color: white;">Test public websites:</strong> Google,
+                        Amazon, YouTube (don't report bugs, just practice
+                        finding them)</li>
+                    <li style="color: white;"><strong style="color: white;">Test demo apps:</strong> Find open-source
+                        projects on GitHub and test them</li>
+                    <li style="color: white;"><strong style="color: white;">Build your own:</strong> Create a simple app
+                        and test it thoroughly</li>
+                    <li style="color: white;"><strong style="color: white;">Document everything:</strong> Keep your test
+                        cases and bug reports in a portfolio</li>
+                </ul>
+                <p class="mt-md" style="color: white;"><strong style="color: white;">Pro Tip:</strong> Check out the <a
+                        href="bug-library.html" style="color: white; text-decoration: underline;">Bug Library</a> for
+                    more real-world examples!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="manual-testing.html">Manual Testing</a></li>
+                <li><a href="api-testing.html">API Testing</a></li>
+            </ul>
+            <p class="footer-text">© 2026 QA Learning Hub. Built by QA professionals, for QA learners.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

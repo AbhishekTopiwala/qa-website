@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn API Testing basics - REST, HTTP methods, status codes, Postman, and authentication. Practical guide for QA beginners.">
+    <title>API Testing Guide - Learn REST API Testing with Postman</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="logo">QA Learning Hub</div>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="roadmap.html" class="nav-link">QA Roadmap</a></li>
+                    <li class="nav-item"><a href="manual-testing.html" class="nav-link">Manual Testing</a></li>
+                    <li class="nav-item"><a href="api-testing.html" class="nav-link">API Testing</a></li>
+                    <li class="nav-item"><a href="automation.html" class="nav-link">Automation</a></li>
+                    <li class="nav-item"><a href="practice.html" class="nav-link">Practice Zone</a></li>
+                    <li class="nav-item"><a href="interview.html" class="nav-link">Interview Prep</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">Resume & Career</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1>API Testing Guide</h1>
+            <p>Learn REST API testing from basics to practical implementation</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+
+            <!-- What is an API -->
+            <div class="mb-xl">
+                <h2>🔌 What is an API?</h2>
+                <p><strong>API (Application Programming Interface)</strong> is a way for different software systems to
+                    communicate with each other. Think of it like a waiter in a restaurant:</p>
+
+                <div class="card mt-md">
+                    <h3>Restaurant Analogy:</h3>
+                    <ul>
+                        <li><strong>You (Customer)</strong> = Frontend/Client (mobile app, website)</li>
+                        <li><strong>Waiter</strong> = API</li>
+                        <li><strong>Kitchen</strong> = Backend/Server (database, business logic)</li>
+                    </ul>
+                    <p class="mt-md">You tell the waiter what you want (request). The waiter takes your order to the
+                        kitchen. The kitchen prepares it and sends it back through the waiter (response).</p>
+                </div>
+
+                <h3 class="mt-lg">Why Test APIs?</h3>
+                <ul>
+                    <li><strong>Backend logic:</strong> APIs contain core business logic that needs validation</li>
+                    <li><strong>Data integrity:</strong> Ensure data is saved, retrieved, and updated correctly</li>
+                    <li><strong>Performance:</strong> APIs must respond quickly, especially under load</li>
+                    <li><strong>Security:</strong> Protect against unauthorized access and data breaches</li>
+                    <li><strong>Multi-platform:</strong> One API serves web, mobile, and other clients—bugs affect all
+                    </li>
+                </ul>
+            </div>
+
+            <!-- REST Basics -->
+            <div class="mb-xl">
+                <h2>🌐 REST API Basics</h2>
+                <p><strong>REST (Representational State Transfer)</strong> is the most common API architecture style.
+                    RESTful APIs use standard HTTP methods to perform operations.</p>
+
+                <div class="card mt-md">
+                    <h3>Key Concepts:</h3>
+                    <ul>
+                        <li><strong>Endpoint/URL:</strong> The address where the API lives (e.g.,
+                            https://api.example.com/users)</li>
+                        <li><strong>Resource:</strong> The data you're working with (users, products, orders)</li>
+                        <li><strong>Request:</strong> What you send to the API (method, headers, body)</li>
+                        <li><strong>Response:</strong> What the API sends back (status code, data)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HTTP Methods -->
+            <div class="mb-xl">
+                <h2>📝 HTTP Methods</h2>
+                <p>HTTP methods define what action you want to perform on a resource.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Purpose</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>GET</strong></td>
+                            <td>Retrieve data (Read)</td>
+                            <td>GET /users/123 → Get user with ID 123</td>
+                        </tr>
+                        <tr>
+                            <td><strong>POST</strong></td>
+                            <td>Create new data</td>
+                            <td>POST /users → Create a new user</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PUT</strong></td>
+                            <td>Update existing data (full update)</td>
+                            <td>PUT /users/123 → Update all fields of user 123</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PATCH</strong></td>
+                            <td>Partially update data</td>
+                            <td>PATCH /users/123 → Update only specific fields</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DELETE</strong></td>
+                            <td>Delete data</td>
+                            <td>DELETE /users/123 → Delete user with ID 123</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Status Codes -->
+            <div class="mb-xl">
+                <h2>📊 HTTP Status Codes</h2>
+                <p>Status codes tell you if your request was successful or what type of error occurred.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>2xx - Success</h4>
+                        <ul>
+                            <li><strong>200 OK:</strong> Request successful</li>
+                            <li><strong>201 Created:</strong> Resource created successfully</li>
+                            <li><strong>204 No Content:</strong> Success, but no data to return</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>4xx - Client Errors</h4>
+                        <ul>
+                            <li><strong>400 Bad Request:</strong> Invalid request data</li>
+                            <li><strong>401 Unauthorized:</strong> Authentication required</li>
+                            <li><strong>403 Forbidden:</strong> No permission</li>
+                            <li><strong>404 Not Found:</strong> Resource doesn't exist</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>5xx - Server Errors</h4>
+                        <ul>
+                            <li><strong>500 Internal Server Error:</strong> Server-side bug</li>
+                            <li><strong>502 Bad Gateway:</strong> Invalid response from upstream server</li>
+                            <li><strong>503 Service Unavailable:</strong> Server is down/overloaded</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Postman Basics -->
+            <div class="mb-xl">
+                <h2>🚀 Postman Basics</h2>
+                <p>Postman is the most popular tool for API testing. It allows you to create, send, and test API
+                    requests easily.</p>
+
+                <h3 class="mt-lg">How to Use Postman:</h3>
+
+                <div class="bug-example">
+                    <h4>Example: GET Request</h4>
+                    <ol>
+                        <li>Open Postman</li>
+                        <li>Select <strong>GET</strong> method from dropdown</li>
+                        <li>Enter URL: <code>https://jsonplaceholder.typicode.com/users/1</code></li>
+                        <li>Click <strong>Send</strong></li>
+                        <li>View response in the bottom panel</li>
+                    </ol>
+                    <p><strong>Expected Response:</strong> 200 OK with user data (id, name, email, etc.)</p>
+                </div>
+
+                <div class="bug-example mt-md">
+                    <h4>Example: POST Request</h4>
+                    <ol>
+                        <li>Select <strong>POST</strong> method</li>
+                        <li>Enter URL: <code>https://jsonplaceholder.typicode.com/users</code></li>
+                        <li>Go to <strong>Body</strong> tab → Select <strong>raw</strong> → Choose <strong>JSON</strong>
+                        </li>
+                        <li>Enter JSON data:</li>
+                    </ol>
+                    <pre><code>{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "username": "johndoe"
+}</code></pre>
+                    <ol start="5">
+                        <li>Click <strong>Send</strong></li>
+                    </ol>
+                    <p><strong>Expected Response:</strong> 201 Created with the created user data including
+                        auto-generated ID</p>
+                </div>
+
+                <h3 class="mt-lg">What to Test in Postman:</h3>
+                <ul>
+                    <li><strong>Status Code:</strong> Is it 200, 201, 404, etc.?</li>
+                    <li><strong>Response Time:</strong> Is the API fast enough? (Usually should be under 2 seconds)</li>
+                    <li><strong>Response Body:</strong> Does it contain expected data? Are fields present and correct?
+                    </li>
+                    <li><strong>Data Types:</strong> Is "age" an integer? Is "email" a string?</li>
+                    <li><strong>Error Handling:</strong> What happens with invalid data? Missing fields?</li>
+                </ul>
+            </div>
+
+            <!-- Authentication -->
+            <div class="mb-xl">
+                <h2>🔐 API Authentication</h2>
+                <p>Most APIs require authentication to ensure only authorized users can access data.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>1. API Key</h4>
+                        <p>A unique string provided by the API to identify you.</p>
+                        <p><strong>Example:</strong> Add to URL or header</p>
+                        <code>?api_key=abc123xyz</code>
+                    </div>
+
+                    <div class="card">
+                        <h4>2. Bearer Token</h4>
+                        <p>Token received after login, sent with each request.</p>
+                        <p><strong>In Postman:</strong> Authorization tab → Type: Bearer Token → Paste token</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>3. Basic Auth</h4>
+                        <p>Username and password encoded in the request header.</p>
+                        <p><strong>In Postman:</strong> Authorization tab → Type: Basic Auth → Enter username/password
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Testing Checklist -->
+            <div class="mb-xl">
+                <h2>✅ API Testing Checklist</h2>
+
+                <div class="card">
+                    <h3>Functional Testing:</h3>
+                    <ul>
+                        <li>Does the API return correct data for valid requests?</li>
+                        <li>Are all required fields present in the response?</li>
+                        <li>Does POST create new resources correctly?</li>
+                        <li>Does PUT/PATCH update data correctly?</li>
+                        <li>Does DELETE remove data correctly?</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>Negative Testing:</h3>
+                    <ul>
+                        <li>What happens with invalid data?</li>
+                        <li>What happens with missing required fields?</li>
+                        <li>What happens without authentication?</li>
+                        <li>What happens with expired tokens?</li>
+                        <li>What happens when resource doesn't exist?</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>Performance Testing:</h3>
+                    <ul>
+                        <li>Is response time acceptable? (under 2 seconds for most APIs)</li>
+                        <li>Can the API handle multiple concurrent requests?</li>
+                        <li>Does performance degrade with large data sets?</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-md">
+                    <h3>Security Testing:</h3>
+                    <ul>
+                        <li>Can unauthorized users access protected endpoints?</li>
+                        <li>Is sensitive data (passwords, tokens) encrypted?</li>
+                        <li>Are there rate limits to prevent abuse?</li>
+                        <li>Does the API validate and sanitize inputs (SQL injection, XSS)?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Practice APIs -->
+            <div class="mb-xl">
+                <h2>🎯 Free APIs for Practice</h2>
+                <p>Practice API testing with these free, public APIs (no authentication required):</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>API</th>
+                            <th>URL</th>
+                            <th>What You Can Test</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>JSONPlaceholder</strong></td>
+                            <td>jsonplaceholder.typicode.com</td>
+                            <td>Users, Posts, Comments, Todos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ReqRes</strong></td>
+                            <td>reqres.in</td>
+                            <td>User CRUD operations, Login, Register</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fake Store API</strong></td>
+                            <td>fakestoreapi.com</td>
+                            <td>Products, Carts, Users, Authentication</td>
+                        </tr>
+                        <tr>
+                            <td><strong>REST Countries</strong></td>
+                            <td>restcountries.com</td>
+                            <td>Country data, search, filters</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="card" style="background: linear-gradient(135deg, #2563eb 0%, #10b981 100%); color: white;">
+                <h3 style="color: white;">✅ Next Steps</h3>
+                <p style="color: white;">You've learned API testing fundamentals! Here's what to do next:</p>
+                <ul style="color: white;">
+                    <li style="color: white;">Install Postman and practice with the free APIs listed above</li>
+                    <li style="color: white;">Write test cases for different scenarios (positive, negative, edge cases)
+                    </li>
+                    <li style="color: white;">Check <a href="bug-library.html"
+                            style="color: white; text-decoration: underline;">Bug
+                            Library</a> for API bug examples</li>
+                    <li style="color: white;">Move to Level 3: <a href="automation.html"
+                            style="color: white; text-decoration: underline;">Learn Automation Basics</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="manual-testing.html">Manual Testing</a></li>
+                <li><a href="api-testing.html">API Testing</a></li>
+            </ul>
+            <p class="footer-text">© 2026 QA Learning Hub. Built by QA professionals, for QA learners.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

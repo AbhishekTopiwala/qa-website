@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="QA interview questions and answers for freshers and experienced testers. Prepare for your QA job interview.">
+    <title>QA Interview Preparation - Questions & Answers</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="logo">QA Learning Hub</div>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="roadmap.html" class="nav-link">QA Roadmap</a></li>
+                    <li class="nav-item"><a href="manual-testing.html" class="nav-link">Manual Testing</a></li>
+                    <li class="nav-item"><a href="api-testing.html" class="nav-link">API Testing</a></li>
+                    <li class="nav-item"><a href="automation.html" class="nav-link">Automation</a></li>
+                    <li class="nav-item"><a href="practice.html" class="nav-link">Practice Zone</a></li>
+                    <li class="nav-item"><a href="interview.html" class="nav-link">Interview Prep</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">Resume & Career</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1>QA Interview Preparation</h1>
+            <p>Common questions with clear, practical answers</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+
+            <p class="text-center text-muted mb-xl">Click on any question to reveal the answer. Study these, but always
+                answer in your own words during interviews.</p>
+
+            <!-- Fresher QA Questions -->
+            <div class="mb-xl">
+                <h2>🌱 Questions for Freshers (0-1 Year)</h2>
+
+                <div class="accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>1. What is Quality Assurance (QA)?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> Quality Assurance is a systematic process of checking
+                                    whether a product or service meets specified requirements. In software, QA involves
+                                    testing applications to find bugs before they reach end users, ensuring the product
+                                    works correctly, is user-friendly, and meets business needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>2. What is the difference between QA and QC?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ul>
+                                    <li><strong>QA (Quality Assurance):</strong> Process-oriented, preventive approach.
+                                        Focuses on preventing defects by improving processes.</li>
+                                    <li><strong>QC (Quality Control):</strong> Product-oriented, detective approach.
+                                        Focuses on identifying defects in the finished product through testing.</li>
+                                </ul>
+                                <p><strong>Example:</strong> QA defines how to write good code and test properly. QC
+                                    actually tests the code to find bugs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>3. Explain SDLC in simple terms.</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> SDLC (Software Development Life Cycle) is the process of
+                                    planning, creating, testing, and deploying software. Common phases include:</p>
+                                <ol>
+                                    <li>Requirements gathering</li>
+                                    <li>Design</li>
+                                    <li>Development/Coding</li>
+                                    <li>Testing</li>
+                                    <li>Deployment</li>
+                                    <li>Maintenance</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>4. What is a test case?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> A test case is a set of steps, conditions, and inputs used
+                                    to verify whether a specific feature works as expected. It includes:</p>
+                                <ul>
+                                    <li>Test Case ID</li>
+                                    <li>Description</li>
+                                    <li>Pre-conditions</li>
+                                    <li>Test steps</li>
+                                    <li>Test data</li>
+                                    <li>Expected result</li>
+                                    <li>Actual result</li>
+                                    <li>Pass/Fail status</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>5. What is the difference between Severity and Priority?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ul>
+                                    <li><strong>Severity:</strong> Impact of the bug on the system (how bad is it?)</li>
+                                    <li><strong>Priority:</strong> Urgency of fixing the bug (how soon should it be
+                                        fixed?)</li>
+                                </ul>
+                                <p><strong>Example:</strong> A typo in the company name on the homepage is low severity
+                                    (doesn't break functionality) but high priority (embarrassing, needs quick fix).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>6. What is Regression Testing?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> Regression testing is re-testing existing functionality
+                                    after code changes to ensure new updates haven't broken previously working features.
+                                    It's performed after bug fixes, new feature additions, or code refactoring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>7. What is the difference between Smoke Testing and Sanity Testing?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ul>
+                                    <li><strong>Smoke Testing:</strong> Quick, broad test to check if basic
+                                        functionalities work after a new build. If smoke test fails, build is rejected.
+                                    </li>
+                                    <li><strong>Sanity Testing:</strong> Narrow, deep test to verify specific
+                                        functionality after minor changes or bug fixes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>8. What is a Bug Life Cycle?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> Bug life cycle describes the stages a bug goes through from
+                                    discovery to closure:</p>
+                                <ol>
+                                    <li><strong>New:</strong> Bug reported by QA</li>
+                                    <li><strong>Assigned:</strong> Bug assigned to developer</li>
+                                    <li><strong>Open:</strong> Developer starts working on it</li>
+                                    <li><strong>Fixed:</strong> Developer fixes and sends for retest</li>
+                                    <li><strong>Retest:</strong> QA retests the bug</li>
+                                    <li><strong>Closed:</strong> If fixed, bug is closed</li>
+                                    <li><strong>Reopened:</strong> If not fixed, bug is reopened</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>9. What is Black Box Testing?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> Black box testing is testing software without knowing its
+                                    internal code structure. Testers focus on inputs and expected outputs. Techniques
+                                    include equivalence partitioning, boundary value analysis, and decision table
+                                    testing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>10. How do you prioritize testing when time is limited?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ol>
+                                    <li>Test critical functionalities first (login, payment, core features)</li>
+                                    <li>Focus on areas with recent code changes</li>
+                                    <li>Run smoke tests to ensure basic functionality works</li>
+                                    <li>Test high-risk areas prone to bugs</li>
+                                    <li>Communicate risks to stakeholders if some areas can't be tested</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Experienced QA Questions -->
+            <div class="mb-xl">
+                <h2>🚀 Questions for 1-2 Years Experience</h2>
+
+                <div class="accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>1. What is API Testing and why is it important?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> API testing validates that APIs work correctly by checking
+                                    requests, responses, status codes, and data integrity. It's important because:</p>
+                                <ul>
+                                    <li>APIs contain core business logic</li>
+                                    <li>One API serves multiple platforms (web, mobile, etc.)</li>
+                                    <li>API bugs affect all connected applications</li>
+                                    <li>Faster than UI testing and can be easily automated</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>2. What tools have you used for API testing?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> I've used Postman for manual API testing. In Postman, I
+                                    test:</p>
+                                <ul>
+                                    <li>Different HTTP methods (GET, POST, PUT, DELETE)</li>
+                                    <li>Response status codes (200, 404, 500, etc.)</li>
+                                    <li>Response time and data validation</li>
+                                    <li>Authentication (Bearer tokens, API keys)</li>
+                                    <li>Positive and negative scenarios</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>3. How do you handle a situation where a developer says "Cannot reproduce"?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ol>
+                                    <li>Retest to confirm bug still exists</li>
+                                    <li>Provide detailed steps, screenshots/videos, and environment details</li>
+                                    <li>Share exact test data used</li>
+                                    <li>Try reproducing on developer's machine together</li>
+                                    <li>Check for environment-specific issues (browser, OS, network)</li>
+                                    <li>Maintain professional communication, focus on solving the problem</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>4. What is Exploratory Testing?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> Exploratory testing is simultaneous learning, test design,
+                                    and execution without predefined test cases. Testers use their experience and
+                                    intuition to explore the application, looking for unexpected behaviors. It's useful
+                                    for finding edge cases that scripted testing might miss.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>5. Explain the difference between Functional and Non-Functional testing.</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ul>
+                                    <li><strong>Functional Testing:</strong> Tests what the system does (features,
+                                        functionality). Example: Login works, search returns results.</li>
+                                    <li><strong>Non-Functional Testing:</strong> Tests how the system performs
+                                        (performance, security, usability). Example: Page loads in 2 seconds, handles
+                                        1000 concurrent users.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>6. What is your approach to testing a new feature?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ol>
+                                    <li>Understand requirements thoroughly</li>
+                                    <li>Clarify ambiguities with product/development team</li>
+                                    <li>Write test plan and test cases</li>
+                                    <li>Get test cases reviewed if needed</li>
+                                    <li>Execute tests (positive, negative, edge cases)</li>
+                                    <li>Log bugs with clear documentation</li>
+                                    <li>Perform regression testing on related features</li>
+                                    <li>Verify bug fixes before closure</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>7. Have you worked in Agile? Explain your role.</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> Yes, I've worked in Agile with 2-week sprints. My role
+                                    included:</p>
+                                <ul>
+                                    <li>Participating in sprint planning to understand user stories</li>
+                                    <li>Writing test cases during the sprint</li>
+                                    <li>Daily testing of completed features</li>
+                                    <li>Attending daily standups to report progress and blockers</li>
+                                    <li>Participating in sprint demos and retrospectives</li>
+                                    <li>Continuous testing throughout the sprint, not just at the end</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>8. What is the most challenging bug you've found?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> (Prepare a real example from your experience. If you're a
+                                    fresher, prepare a hypothetical scenario based on your learning. Structure: Context
+                                    → Bug → Impact → How you found it → Resolution)</p>
+                                <p><strong>Example structure:</strong> "During testing of a checkout feature, I found
+                                    that when users applied a discount code and then changed their cart items, the
+                                    discount remained but calculated on the old cart total. This could lead to revenue
+                                    loss. I found it while exploring different user flows. The team fixed it by
+                                    recalculating discounts whenever cart changes occurred."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Real-World Scenario Questions -->
+            <div class="mb-xl">
+                <h2>💼 Real-World Scenario Questions</h2>
+
+                <div class="accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>1. How would you test a login page?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> I would test:</p>
+                                <ul>
+                                    <li><strong>Positive:</strong> Valid credentials, successful login</li>
+                                    <li><strong>Negative:</strong> Wrong password, wrong username, empty fields</li>
+                                    <li><strong>UI:</strong> Field validations, error messages, "Forgot password" link
+                                    </li>
+                                    <li><strong>Security:</strong> Password mask, SQL injection, session timeout</li>
+                                    <li><strong>Browser compatibility:</strong> Chrome, Firefox, Safari</li>
+                                    <li><strong>Mobile responsiveness:</strong> Test on different screen sizes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>2. How would you test an e-commerce search feature?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ul>
+                                    <li>Search with valid product name → Should return relevant results</li>
+                                    <li>Search with non-existent product → Should show "No results found"</li>
+                                    <li>Search with special characters, numbers</li>
+                                    <li>Search with very long strings</li>
+                                    <li>Empty search → Handle gracefully</li>
+                                    <li>Check search suggestions/autocomplete</li>
+                                    <li>Test filters (price, category, rating)</li>
+                                    <li>Check pagination if many results</li>
+                                    <li>Performance: Response time should be fast</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>3. A critical production bug is found. What do you do?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong></p>
+                                <ol>
+                                    <li>Reproduce the bug immediately to confirm</li>
+                                    <li>Assess severity and impact (how many users affected?)</li>
+                                    <li>Notify stakeholders (manager, product owner, developers) urgently</li>
+                                    <li>Document bug clearly with steps to reproduce</li>
+                                    <li>Help development team reproduce if needed</li>
+                                    <li>Once fixed, verify the fix in staging before production</li>
+                                    <li>After deployment, verify the fix again in production</li>
+                                    <li>Analyze root cause: Why did it reach production? Improve testing process</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- HR Questions -->
+            <div class="mb-xl">
+                <h2>💬 HR / Behavioral Questions</h2>
+
+                <div class="accordion">
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>1. Tell me about yourself.</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Structure:</strong> Keep it professional and concise (1-2 minutes)</p>
+                                <p><strong>Example:</strong> "I'm a QA professional with [X years] of experience in
+                                    manual and API testing. I've worked on [type of projects], where I was responsible
+                                    for test planning, execution, and bug reporting. I'm proficient in tools like
+                                    Postman for API testing and have experience writing detailed test cases. I'm
+                                    passionate about ensuring quality and user satisfaction, and I'm looking to grow my
+                                    skills in automation testing."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>2. Why do you want to work in QA?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> Focus on genuine interest, not just "it's easy to get into"
+                                </p>
+                                <p><strong>Example:</strong> "I enjoy problem-solving and finding issues that others
+                                    might miss. QA allows me to ensure users have a smooth experience. I like the
+                                    satisfaction of catching bugs before they impact customers. The field also offers
+                                    continuous learning with new testing techniques, tools, and technologies."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>3. What are your strengths and weaknesses?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Strengths:</strong> Attention to detail, analytical thinking, good
+                                    communication, teamwork</p>
+                                <p><strong>Weakness:</strong> Pick something real but show you're working on it.
+                                    Example: "I sometimes spend too much time perfecting test cases. I'm learning to
+                                    balance thoroughness with efficiency by prioritizing critical test scenarios first."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>4. Where do you see yourself in 5 years?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-body">
+                                <p><strong>Answer:</strong> Show ambition but stay realistic</p>
+                                <p><strong>Example:</strong> "I see myself as a senior QA or SDET with strong automation
+                                    skills. I want to mentor junior QA engineers and contribute to building robust
+                                    testing frameworks. Eventually, I'd like to move into a QA lead role where I can
+                                    design testing strategies for complex projects."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Interview Tips -->
+            <div class="card" style="background: linear-gradient(135deg, #2563eb 0%, #10b981 100%); color: white;">
+                <h3 style="color: white;">💡 Interview Tips</h3>
+                <ul style="color: white;">
+                    <li style="color: white;"><strong style="color: white;">Be honest:</strong> Don't claim to know
+                        tools you haven't used</li>
+                    <li style="color: white;"><strong style="color: white;">Use STAR method:</strong> Situation, Task,
+                        Action, Result (for behavioral questions)
+                    </li>
+                    <li style="color: white;"><strong style="color: white;">Ask questions:</strong> About team size,
+                        projects, tools, growth opportunities</li>
+                    <li style="color: white;"><strong style="color: white;">Show enthusiasm:</strong> Passion for
+                        quality matters</li>
+                    <li style="color: white;"><strong style="color: white;">Prepare examples:</strong> Have 2-3
+                        scenarios ready (bug you found, challenge you faced)
+                    </li>
+                    <li style="color: white;"><strong style="color: white;">Research the company:</strong> Know what
+                        they do, their products</li>
+                    <li style="color: white;"><strong style="color: white;">Follow up:</strong> Send a thank-you email
+                        after the interview</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="manual-testing.html">Manual Testing</a></li>
+                <li><a href="api-testing.html">API Testing</a></li>
+            </ul>
+            <p class="footer-text">© 2026 QA Learning Hub. Built by QA professionals, for QA learners.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

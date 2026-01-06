@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn Test Automation basics - When to automate, Selenium vs Playwright, and automation's role in QA careers.">
+    <title>Test Automation Basics - Beginner-Friendly Guide</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="logo">QA Learning Hub</div>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="roadmap.html" class="nav-link">QA Roadmap</a></li>
+                    <li class="nav-item"><a href="manual-testing.html" class="nav-link">Manual Testing</a></li>
+                    <li class="nav-item"><a href="api-testing.html" class="nav-link">API Testing</a></li>
+                    <li class="nav-item"><a href="automation.html" class="nav-link">Automation</a></li>
+                    <li class="nav-item"><a href="practice.html" class="nav-link">Practice Zone</a></li>
+                    <li class="nav-item"><a href="interview.html" class="nav-link">Interview Prep</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">Resume & Career</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1>Test Automation Basics</h1>
+            <p>Understand automation concepts without heavy coding</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+
+            <!-- What is Automation -->
+            <div class="mb-xl">
+                <h2>🤖 What is Test Automation?</h2>
+                <p>Test automation means using software tools to execute tests automatically instead of manually
+                    clicking through your application. Think of it as recording your manual test steps and having a
+                    robot repeat them for you.</p>
+
+                <div class="card-grid mt-lg">
+                    <div class="card">
+                        <h3>Manual Testing</h3>
+                        <ul>
+                            <li>✋ Human performs test steps</li>
+                            <li>⏱️ Time-consuming for repetitive tests</li>
+                            <li>👁️ Better for exploratory testing</li>
+                            <li>🧠 Requires human judgment</li>
+                            <li>💰 No coding skills needed initially</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Automated Testing</h3>
+                        <ul>
+                            <li>🤖 Script performs test steps</li>
+                            <li>⚡ Fast execution, runs 24/7</li>
+                            <li>🔄 Perfect for regression testing</li>
+                            <li>📊 Consistent, repeatable results</li>
+                            <li>💻 Requires coding knowledge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- When to Automate -->
+            <div class="mb-xl">
+                <h2>✅ When to Automate</h2>
+                <p>Not everything should be automated. Automation works best for:</p>
+
+                <div class="card">
+                    <ul>
+                        <li><strong>Regression Tests:</strong> Tests that run repeatedly after every code change</li>
+                        <li><strong>Smoke Tests:</strong> Quick sanity checks after new deployments</li>
+                        <li><strong>Data-Driven Tests:</strong> Same test with multiple data sets (login with 100 users)
+                        </li>
+                        <li><strong>Stable Features:</strong> Features that don't change frequently</li>
+                        <li><strong>Time-Consuming Tests:</strong> Tests that take hours manually</li>
+                        <li><strong>Cross-Browser Testing:</strong> Testing on Chrome, Firefox, Safari, Edge</li>
+                        <li><strong>API Tests:</strong> Backend testing is perfect for automation</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-lg" style="background-color: #d1fae5;">
+                    <h3>Good Automation Example:</h3>
+                    <p><strong>Scenario:</strong> Login functionality</p>
+                    <p><strong>Why automate?</strong> Login is tested hundreds of times, never changes, and needs
+                        checking on every browser.</p>
+                    <p><strong>Result:</strong> Automated login test saves hours of repetitive manual work.</p>
+                </div>
+            </div>
+
+            <!-- When NOT to Automate -->
+            <div class="mb-xl">
+                <h2>❌ When NOT to Automate</h2>
+                <p>Some scenarios are better left to manual testing:</p>
+
+                <div class="card">
+                    <ul>
+                        <li><strong>Exploratory Testing:</strong> Creative, unscripted testing to find unexpected bugs
+                        </li>
+                        <li><strong>Usability Testing:</strong> How intuitive is the UI? Does it feel right?</li>
+                        <li><strong>Ad-Hoc Testing:</strong> Random testing without predefined steps</li>
+                        <li><strong>Rapidly Changing Features:</strong> If UI changes daily, automation breaks
+                            constantly</li>
+                        <li><strong>One-Time Tests:</strong> Tests that run only once don't justify automation effort
+                        </li>
+                        <li><strong>Visual Validation:</strong> "Does this button look good?" needs human eyes</li>
+                        <li><strong>Complex User Flows:</strong> Very complicated scenarios may be hard to automate</li>
+                    </ul>
+                </div>
+
+                <div class="card mt-lg" style="background-color: #fee2e2;">
+                    <h3>Bad Automation Example:</h3>
+                    <p><strong>Scenario:</strong> New feature still in development, UI changes every day</p>
+                    <p><strong>Why not automate?</strong> Test scripts will break daily, wasting time on maintenance.
+                    </p>
+                    <p><strong>Better approach:</strong> Manual testing until feature stabilizes, then automate.</p>
+                </div>
+            </div>
+
+            <!-- Selenium Overview -->
+            <div class="mb-xl">
+                <h2>🌐 Selenium Overview</h2>
+                <p>Selenium is the most popular open-source tool for automating web browsers. It's been around since
+                    2004 and is widely used in the industry.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>✅ Pros</h3>
+                        <ul>
+                            <li>Free and open-source</li>
+                            <li>Supports all major browsers</li>
+                            <li>Large community and resources</li>
+                            <li>Works with Java, Python, C#, JavaScript</li>
+                            <li>Industry standard (most jobs ask for it)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>❌ Cons</h3>
+                        <ul>
+                            <li>Setup can be complex for beginners</li>
+                            <li>Slower than modern alternatives</li>
+                            <li>Requires more code for simple tasks</li>
+                            <li>Flaky tests (sometimes fail randomly)</li>
+                            <li>Steeper learning curve</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-lg">
+                    <h4>When to Use Selenium:</h4>
+                    <ul>
+                        <li>You're testing web applications</li>
+                        <li>You need cross-browser testing</li>
+                        <li>Job requirements mention Selenium</li>
+                        <li>You're comfortable with Java or Python</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Playwright Overview -->
+            <div class="mb-xl">
+                <h2>🎭 Playwright Overview</h2>
+                <p>Playwright is a modern automation framework created by Microsoft in 2020. It's designed to fix many
+                    of Selenium's pain points.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>✅ Pros</h3>
+                        <ul>
+                            <li>Faster and more reliable</li>
+                            <li>Auto-waits for elements (fewer flaky tests)</li>
+                            <li>Easier to set up and use</li>
+                            <li>Built-in test runner</li>
+                            <li>Better debugging tools</li>
+                            <li>Modern features out of the box</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>❌ Cons</h3>
+                        <ul>
+                            <li>Newer (less community support)</li>
+                            <li>Fewer job postings mention it</li>
+                            <li>Smaller ecosystem of plugins</li>
+                            <li>Limited to JavaScript/TypeScript/Python</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-lg">
+                    <h4>When to Use Playwright:</h4>
+                    <ul>
+                        <li>You're starting fresh (not maintaining old Selenium tests)</li>
+                        <li>You want faster, more reliable tests</li>
+                        <li>You're comfortable with JavaScript or Python</li>
+                        <li>You're testing modern web applications</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="mb-xl">
+                <h2>⚖️ Selenium vs Playwright</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Selenium</th>
+                            <th>Playwright</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Release Year</strong></td>
+                            <td>2004 (mature)</td>
+                            <td>2020 (modern)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Learning Curve</strong></td>
+                            <td>Steeper</td>
+                            <td>Easier</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Speed</strong></td>
+                            <td>Slower</td>
+                            <td>Faster</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Job Market</strong></td>
+                            <td>High demand</td>
+                            <td>Growing demand</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Auto-Wait</strong></td>
+                            <td>Manual waits needed</td>
+                            <td>Built-in auto-wait</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Flakiness</strong></td>
+                            <td>More common</td>
+                            <td>Less common</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Best For</strong></td>
+                            <td>Established companies, legacy projects</td>
+                            <td>Modern projects, startups</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Role in Career -->
+            <div class="mb-xl">
+                <h2>💼 Automation's Role in QA Career</h2>
+
+                <div class="card">
+                    <h3>Career Progression:</h3>
+                    <ol>
+                        <li><strong>Junior Manual QA (0-1 year):</strong> Focus on manual testing, test cases, bug
+                            reporting</li>
+                        <li><strong>Manual QA + API (1-2 years):</strong> Add API testing with Postman, basic SQL</li>
+                        <li><strong>SDET / Automation QA (2-4 years):</strong> Learn Selenium or Playwright, write
+                            automation scripts</li>
+                        <li><strong>Lead QA / QA Manager (4+ years):</strong> Design test strategies, mentor juniors,
+                            manage QA processes</li>
+                    </ol>
+                </div>
+
+                <div class="card mt-lg">
+                    <h3>Salary Impact:</h3>
+                    <ul>
+                        <li><strong>Manual QA:</strong> Entry to mid-level salary</li>
+                        <li><strong>Manual + API QA:</strong> +20-30% higher salary</li>
+                        <li><strong>Automation QA / SDET:</strong> +40-60% higher than pure manual</li>
+                    </ul>
+                    <p class="mt-md"><em>Note: Automation skills significantly boost your earning potential and job
+                            opportunities.</em></p>
+                </div>
+            </div>
+
+            <!-- Getting Started -->
+            <div class="mb-xl">
+                <h2>🚀 How to Get Started with Automation</h2>
+
+                <div class="card">
+                    <h3>Recommended Path for Beginners:</h3>
+                    <ol>
+                        <li><strong>Master Manual Testing First:</strong> Don't jump to automation too early</li>
+                        <li><strong>Learn Programming Basics:</strong> Start with Python or JavaScript
+                            <ul>
+                                <li>Variables, loops, functions, conditions</li>
+                                <li>Basic syntax and logic</li>
+                            </ul>
+                        </li>
+                        <li><strong>Pick a Tool:</strong>
+                            <ul>
+                                <li>Selenium if job market requires it</li>
+                                <li>Playwright if starting fresh</li>
+                            </ul>
+                        </li>
+                        <li><strong>Start Small:</strong> Automate simple scenarios (login, search)</li>
+                        <li><strong>Practice Daily:</strong> Build a portfolio of test scripts</li>
+                        <li><strong>Learn Frameworks:</strong> TestNG, PyTest, Mocha (after basics)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Reality Check -->
+            <div class="card" style="background-color: #fef3c7;">
+                <h3>⚠️ Reality Check</h3>
+                <p><strong>Automation is NOT a replacement for manual testing.</strong></p>
+                <ul>
+                    <li>Good QA professionals know both manual and automation</li>
+                    <li>Manual testing skills are foundational—don't skip them</li>
+                    <li>Automation complements manual testing, doesn't replace it</li>
+                    <li>You'll spend time maintaining automation scripts, not just writing them</li>
+                    <li>Expect a learning curve—automation takes 6-12 months to get comfortable</li>
+                </ul>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="card mt-xl"
+                style="background: linear-gradient(135deg, #2563eb 0%, #10b981 100%); color: white;">
+                <h3 style="color: white;">✅ Next Steps</h3>
+                <p style="color: white;">You understand automation basics! Here's what to do next:</p>
+                <ul style="color: white;">
+                    <li style="color: white;">Ensure your manual and API testing skills are solid first</li>
+                    <li style="color: white;">Learn basic programming (Python or JavaScript)</li>
+                    <li style="color: white;">Practice with small automation projects</li>
+                    <li style="color: white;">Prepare for job interviews: <a href="interview.html"
+                            style="color: white; text-decoration: underline;">Interview Prep</a></li>
+                    <li style="color: white;">Build your QA resume: <a href="resume.html"
+                            style="color: white; text-decoration: underline;">Resume Tips</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="manual-testing.html">Manual Testing</a></li>
+                <li><a href="api-testing.html">API Testing</a></li>
+            </ul>
+            <p class="footer-text">© 2026 QA Learning Hub. Built by QA professionals, for QA learners.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Complete guide to Manual Testing - Learn SDLC, STLC, test case writing, bug reporting, and testing techniques.">
+    <title>Manual Testing Guide - Complete QA Fundamentals</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="logo">QA Learning Hub</div>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="roadmap.html" class="nav-link">QA Roadmap</a></li>
+                    <li class="nav-item"><a href="manual-testing.html" class="nav-link">Manual Testing</a></li>
+                    <li class="nav-item"><a href="api-testing.html" class="nav-link">API Testing</a></li>
+                    <li class="nav-item"><a href="automation.html" class="nav-link">Automation</a></li>
+                    <li class="nav-item"><a href="practice.html" class="nav-link">Practice Zone</a></li>
+                    <li class="nav-item"><a href="interview.html" class="nav-link">Interview Prep</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">Resume & Career</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1>Manual Testing Guide</h1>
+            <p>Master the fundamentals of software testing</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+
+            <!-- SDLC -->
+            <div class="mb-xl">
+                <h2>📊 SDLC (Software Development Life Cycle)</h2>
+                <p>SDLC is the process followed to develop software from planning to deployment and maintenance.
+                    Understanding SDLC helps QA professionals know when and how testing fits into the development
+                    process.</p>
+
+                <h3 class="mt-lg">Common SDLC Models:</h3>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Waterfall Model</h4>
+                        <p><strong>How it works:</strong> Sequential phases - Requirements → Design → Development →
+                            Testing → Deployment → Maintenance</p>
+                        <p><strong>Testing phase:</strong> Happens after development is complete</p>
+                        <p><strong>Best for:</strong> Projects with clear, fixed requirements</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Agile Model</h4>
+                        <p><strong>How it works:</strong> Iterative development in short sprints (1-4 weeks)</p>
+                        <p><strong>Testing phase:</strong> Continuous testing throughout each sprint</p>
+                        <p><strong>Best for:</strong> Projects with changing requirements, modern software development
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h4>V-Model</h4>
+                        <p><strong>How it works:</strong> Each development phase has a corresponding testing phase</p>
+                        <p><strong>Testing phase:</strong> Test planning starts early, execution happens later</p>
+                        <p><strong>Best for:</strong> Projects requiring high reliability and validation</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STLC -->
+            <div class="mb-xl">
+                <h2>🔄 STLC (Software Testing Life Cycle)</h2>
+                <p>STLC is the step-by-step process followed by QA teams to ensure comprehensive testing. It's a subset
+                    of SDLC focused specifically on testing activities.</p>
+
+                <div class="card mt-md">
+                    <h3>STLC Phases:</h3>
+                    <ol>
+                        <li><strong>Requirement Analysis:</strong> Understand what needs to be tested. Identify testable
+                            requirements.</li>
+                        <li><strong>Test Planning:</strong> Define test strategy, scope, resources, schedule, and
+                            deliverables.</li>
+                        <li><strong>Test Case Design:</strong> Write detailed test cases based on requirements.</li>
+                        <li><strong>Test Environment Setup:</strong> Prepare testing infrastructure (servers, databases,
+                            test data).</li>
+                        <li><strong>Test Execution:</strong> Run test cases, compare actual vs expected results, log
+                            bugs.</li>
+                        <li><strong>Test Closure:</strong> Document learnings, metrics, and prepare test summary report.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Types of Testing -->
+            <div class="mb-xl">
+                <h2>🧪 Types of Testing</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Purpose</th>
+                            <th>When to Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Functional Testing</strong></td>
+                            <td>Verify features work as per requirements</td>
+                            <td>Every feature, every sprint</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Regression Testing</strong></td>
+                            <td>Ensure new changes don't break existing features</td>
+                            <td>After bug fixes or new feature additions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Smoke Testing</strong></td>
+                            <td>Quick check if basic features work</td>
+                            <td>After new build deployment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sanity Testing</strong></td>
+                            <td>Verify specific functionality after minor changes</td>
+                            <td>After small bug fixes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>UAT (User Acceptance Testing)</strong></td>
+                            <td>Validate if software meets business needs</td>
+                            <td>Before final release, done by end users</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Integration Testing</strong></td>
+                            <td>Test interaction between different modules</td>
+                            <td>When multiple components are integrated</td>
+                        </tr>
+                        <tr>
+                            <td><strong>System Testing</strong></td>
+                            <td>Test the complete integrated system</td>
+                            <td>After integration, before UAT</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Test Case Writing -->
+            <div class="mb-xl">
+                <h2>✍️ Test Case Writing</h2>
+                <p>A test case is a set of conditions used to verify if a feature works correctly. Good test cases are
+                    clear, concise, and repeatable.</p>
+
+                <h3 class="mt-lg">Test Case Structure:</h3>
+
+                <div class="card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Field</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Test Case ID</strong></td>
+                                <td>Unique identifier (e.g., TC_LOGIN_001)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Test Title</strong></td>
+                                <td>Brief description of what is being tested</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Module/Feature</strong></td>
+                                <td>Which part of the application (e.g., Login, Checkout)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pre-conditions</strong></td>
+                                <td>Setup required before test execution</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Test Steps</strong></td>
+                                <td>Numbered steps to execute the test</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Test Data</strong></td>
+                                <td>Data used for testing (usernames, emails, etc.)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Expected Result</strong></td>
+                                <td>What should happen</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Actual Result</strong></td>
+                                <td>What actually happened (filled during execution)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Status</strong></td>
+                                <td>Pass / Fail</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="mt-lg">Example Test Case:</h3>
+
+                <div class="bug-example">
+                    <div class="bug-field">
+                        <strong>Test Case ID:</strong> TC_LOGIN_001
+                    </div>
+                    <div class="bug-field">
+                        <strong>Test Title:</strong> Verify login with valid credentials
+                    </div>
+                    <div class="bug-field">
+                        <strong>Module:</strong> User Authentication
+                    </div>
+                    <div class="bug-field">
+                        <strong>Pre-conditions:</strong> User must be registered in the system
+                    </div>
+                    <div class="bug-field">
+                        <strong>Test Steps:</strong>
+                        <ol>
+                            <li>Navigate to login page</li>
+                            <li>Enter valid username</li>
+                            <li>Enter valid password</li>
+                            <li>Click "Login" button</li>
+                        </ol>
+                    </div>
+                    <div class="bug-field">
+                        <strong>Test Data:</strong> Username: testuser@example.com, Password: Test@123
+                    </div>
+                    <div class="bug-field">
+                        <strong>Expected Result:</strong> User should be logged in and redirected to dashboard
+                    </div>
+                    <div class="bug-field">
+                        <strong>Actual Result:</strong> User logged in successfully and redirected to dashboard
+                    </div>
+                    <div class="bug-field">
+                        <strong>Status:</strong> <span class="badge badge-success">PASS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bug Reporting -->
+            <div class="mb-xl">
+                <h2>🐛 Bug Reporting</h2>
+                <p>A bug report is a detailed document describing an issue found during testing. Good bug reports help
+                    developers fix issues quickly.</p>
+
+                <h3 class="mt-lg">Bug Report Template:</h3>
+
+                <div class="bug-example">
+                    <div class="bug-field">
+                        <strong>Bug ID:</strong> BUG_001
+                    </div>
+                    <div class="bug-field">
+                        <strong>Bug Title:</strong> Login button not working on mobile devices
+                    </div>
+                    <div class="bug-field">
+                        <strong>Module:</strong> User Authentication
+                    </div>
+                    <div class="bug-field">
+                        <strong>Environment:</strong> Chrome Mobile, Android 12
+                    </div>
+                    <div class="bug-field">
+                        <strong>Steps to Reproduce:</strong>
+                        <ol>
+                            <li>Open website on mobile browser (Chrome, Android 12)</li>
+                            <li>Navigate to login page</li>
+                            <li>Enter valid credentials</li>
+                            <li>Tap "Login" button</li>
+                        </ol>
+                    </div>
+                    <div class="bug-field">
+                        <strong>Expected Result:</strong> User should be logged in and redirected to dashboard
+                    </div>
+                    <div class="bug-field">
+                        <strong>Actual Result:</strong> Login button does not respond to tap, nothing happens
+                    </div>
+                    <div class="bug-field">
+                        <strong>Severity:</strong> <span class="bug-severity high">High</span>
+                    </div>
+                    <div class="bug-field">
+                        <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                    </div>
+                    <div class="bug-field">
+                        <strong>Attachments:</strong> Screenshot showing the issue (if applicable)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Severity vs Priority -->
+            <div class="mb-xl">
+                <h2>⚖️ Severity vs Priority</h2>
+                <p>Understanding the difference between severity and priority helps in effective bug management.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Severity</h3>
+                        <p><strong>Definition:</strong> Impact of the bug on the system's functionality</p>
+                        <p><strong>Determined by:</strong> QA Team</p>
+                        <p><strong>Levels:</strong></p>
+                        <ul>
+                            <li><strong>Critical:</strong> System crash, data loss</li>
+                            <li><strong>High:</strong> Major feature not working</li>
+                            <li><strong>Medium:</strong> Feature works but has issues</li>
+                            <li><strong>Low:</strong> Minor UI issues, typos</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Priority</h3>
+                        <p><strong>Definition:</strong> Urgency of fixing the bug</p>
+                        <p><strong>Determined by:</strong> Product/Project Manager</p>
+                        <p><strong>Levels:</strong></p>
+                        <ul>
+                            <li><strong>P1 (Critical):</strong> Fix immediately</li>
+                            <li><strong>P2 (High):</strong> Fix in current sprint</li>
+                            <li><strong>P3 (Medium):</strong> Fix in next sprint</li>
+                            <li><strong>P4 (Low):</strong> Fix when time permits</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-lg">
+                    <h4>Example Scenarios:</h4>
+                    <ul>
+                        <li><strong>High Severity, High Priority:</strong> Payment gateway not working → Users can't
+                            buy, fix NOW</li>
+                        <li><strong>High Severity, Low Priority:</strong> Bug in a feature launching next month →
+                            Important but not urgent</li>
+                        <li><strong>Low Severity, High Priority:</strong> Company logo typo on homepage → Low impact but
+                            embarrassing, fix quickly</li>
+                        <li><strong>Low Severity, Low Priority:</strong> Minor color mismatch in footer → Can wait</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Black Box Testing Techniques -->
+            <div class="mb-xl">
+                <h2>🎯 Black Box Testing Techniques</h2>
+                <p>Black box testing focuses on inputs and outputs without knowing the internal code. These techniques
+                    help create effective test cases.</p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>1. Equivalence Partitioning</h4>
+                        <p>Divide input data into groups (partitions) that behave similarly. Test one value from each
+                            partition.</p>
+                        <p><strong>Example:</strong> Age field (0-120)</p>
+                        <ul>
+                            <li>Invalid: -5, -1</li>
+                            <li>Valid: 1, 50, 100</li>
+                            <li>Invalid: 121, 200</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>2. Boundary Value Analysis</h4>
+                        <p>Test at the boundaries of input ranges. Bugs often occur at edges.</p>
+                        <p><strong>Example:</strong> Password length (8-20 characters)</p>
+                        <ul>
+                            <li>Test: 7, 8, 9 (lower boundary)</li>
+                            <li>Test: 19, 20, 21 (upper boundary)</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>3. Decision Table Testing</h4>
+                        <p>Create a table showing conditions and corresponding actions/outcomes.</p>
+                        <p><strong>Example:</strong> Login functionality</p>
+                        <ul>
+                            <li>Valid user + Valid password = Login success</li>
+                            <li>Valid user + Invalid password = Error message</li>
+                            <li>Invalid user + Any password = Error message</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>4. State Transition Testing</h4>
+                        <p>Test how the system transitions between different states.</p>
+                        <p><strong>Example:</strong> Order status</p>
+                        <ul>
+                            <li>Pending → Processing → Shipped → Delivered</li>
+                            <li>Can order be cancelled in each state?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="card" style="background: linear-gradient(135deg, #2563eb 0%, #10b981 100%); color: white;">
+                <h3 style="color: white;">✅ Next Steps</h3>
+                <p>You've learned the manual testing fundamentals! Here's what to do next:</p>
+                <ul>
+                    <li>Practice writing test cases for real websites or apps</li>
+                    <li>Check out the <a href="bug-library.html" style="color: white; text-decoration: underline;">Bug
+                            Report Library</a> for real examples</li>
+                    <li>Test your skills in the <a href="practice.html"
+                            style="color: white; text-decoration: underline;">Practice Zone</a></li>
+                    <li>Move to Level 2: <a href="api-testing.html"
+                            style="color: white; text-decoration: underline;">Learn API Testing</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="manual-testing.html">Manual Testing</a></li>
+                <li><a href="api-testing.html">API Testing</a></li>
+            </ul>
+            <p class="footer-text">© 2026 QA Learning Hub. Built by QA professionals, for QA learners.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

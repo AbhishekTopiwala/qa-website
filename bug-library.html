@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Real-world bug report examples for Web, Mobile, UI/UX, Gaming, and API testing. Learn how to write effective bug reports.">
+    <title>Bug Report Library - Real QA Bug Examples</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="logo">QA Learning Hub</div>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="roadmap.html" class="nav-link">QA Roadmap</a></li>
+                    <li class="nav-item"><a href="manual-testing.html" class="nav-link">Manual Testing</a></li>
+                    <li class="nav-item"><a href="api-testing.html" class="nav-link">API Testing</a></li>
+                    <li class="nav-item"><a href="automation.html" class="nav-link">Automation</a></li>
+                    <li class="nav-item"><a href="practice.html" class="nav-link">Practice Zone</a></li>
+                    <li class="nav-item"><a href="interview.html" class="nav-link">Interview Prep</a></li>
+                    <li class="nav-item"><a href="resume.html" class="nav-link">Resume & Career</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero">
+        <div class="container">
+            <h1>Bug Report Library</h1>
+            <p>Learn from real-world bug examples across different platforms</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section">
+        <div class="container">
+
+            <p class="text-center text-muted mb-xl">Study these bug reports to understand how to document issues
+                clearly. Notice the structure: Title, Steps, Expected vs Actual, Severity, and Priority.</p>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="web-bugs">Web Apps</button>
+                    <button class="tab-button" data-tab="mobile-bugs">Mobile Apps</button>
+                    <button class="tab-button" data-tab="ui-bugs">UI/UX</button>
+                    <button class="tab-button" data-tab="gaming-bugs">Gaming</button>
+                    <button class="tab-button" data-tab="api-bugs">API</button>
+                </div>
+
+                <!-- WEB BUGS -->
+                <div id="web-bugs" class="tab-content active">
+                    <h2>Web Application Bugs</h2>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Login page redirects to 404 after successful authentication</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Navigate to www.example.com/login</li>
+                                <li>Enter valid credentials (username: testuser, password: Test@123)</li>
+                                <li>Click "Sign In" button</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> User should be redirected to dashboard at
+                            www.example.com/dashboard
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> User is redirected to www.example.com/dashbord (typo in URL)
+                            which shows 404 error page
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity high">High</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Chrome 120, Windows 11
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Search results show deleted products</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Login as admin</li>
+                                <li>Delete a product (e.g., "Blue T-Shirt")</li>
+                                <li>Logout and login as regular user</li>
+                                <li>Search for "Blue T-Shirt" in search bar</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> Deleted product should not appear in search results
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> Deleted product appears in search results. Clicking it shows
+                            "Product not found" error
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity medium">Medium</span> |
+                            <strong>Priority:</strong> <span class="bug-severity medium">Medium</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Firefox 121, macOS 14
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Form data lost when clicking browser back button</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Navigate to registration form</li>
+                                <li>Fill in all fields (Name, Email, Phone, Address)</li>
+                                <li>Click "Next" to go to step 2</li>
+                                <li>Click browser back button</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> Form should retain previously entered data
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> All form fields are empty, user has to re-enter everything
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity medium">Medium</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Chrome 120, Windows 11
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOBILE BUGS -->
+                <div id="mobile-bugs" class="tab-content">
+                    <h2>Mobile Application Bugs</h2>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">App crashes when uploading images larger than 5MB</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Open mobile app</li>
+                                <li>Navigate to Profile → Edit Profile</li>
+                                <li>Tap "Upload Photo"</li>
+                                <li>Select an image larger than 5MB from gallery</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> App should compress image or show error message "File too
+                            large, max 5MB"
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> App crashes immediately without any error message
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity high">High</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Android 13, Samsung Galaxy S23
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Keyboard covers input field on login screen</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Open app on iPhone 14</li>
+                                <li>Tap on password field</li>
+                                <li>Keyboard appears</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> Screen should scroll up so password field is visible above
+                            keyboard
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> Keyboard completely covers the password field, user cannot
+                            see what they're typing
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity medium">Medium</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> iOS 17.2, iPhone 14
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Push notifications not working when app is closed</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Enable push notifications in app settings</li>
+                                <li>Close the app completely (swipe away from recent apps)</li>
+                                <li>Have another user send you a message</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> User should receive push notification even when app is
+                            closed
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> No notification received. Notifications only work when app
+                            is open
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity high">High</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Android 12, OnePlus 9 Pro
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX BUGS -->
+                <div id="ui-bugs" class="tab-content">
+                    <h2>UI/UX Bugs</h2>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Text overlaps on small screen devices</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Open website on mobile browser (360px width screen)</li>
+                                <li>Navigate to pricing page</li>
+                                <li>Observe the pricing cards</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> All text should be readable, properly aligned, and not
+                            overlapping
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> Price text overlaps with feature list. Text is cut off and
+                            unreadable
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity medium">Medium</span> |
+                            <strong>Priority:</strong> <span class="bug-severity medium">Medium</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Chrome Mobile, 360x640 screen
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Color contrast too low - text not readable for visually impaired users
+                        </h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Navigate to homepage</li>
+                                <li>Observe the hero section text</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> Text should meet WCAG AA standards (contrast ratio at
+                            least 4.5:1)
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> Light gray text (#b0b0b0) on white background has contrast
+                            ratio of 1.8:1, failing accessibility standards
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity medium">Medium</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> All browsers
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Loading spinner continues spinning after content is loaded</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Navigate to products page</li>
+                                <li>Wait for products to load</li>
+                                <li>Observe the loading spinner</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> Loading spinner should disappear once products are
+                            displayed
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> Products appear but loading spinner continues spinning
+                            indefinitely
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity low">Low</span> |
+                            <strong>Priority:</strong> <span class="bug-severity medium">Medium</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Chrome 120, Windows 11
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GAMING BUGS -->
+                <div id="gaming-bugs" class="tab-content">
+                    <h2>Gaming Bugs</h2>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Character falls through floor at specific coordinates</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Start game and select Level 3</li>
+                                <li>Walk to coordinates X: 234, Y: 567 (near the bridge)</li>
+                                <li>Jump</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> Character should land on the ground normally
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> Character falls through the floor and game freezes
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity high">High</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Windows 11, GeForce RTX 3060
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Game progress not saved after completing mission</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Complete Mission 5</li>
+                                <li>See "Mission Complete" message</li>
+                                <li>Exit game</li>
+                                <li>Restart game</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> Mission 6 should be unlocked, progress should be saved
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> Game shows Mission 5 as incomplete, progress lost
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity high">High</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> PlayStation 5
+                        </div>
+                    </div>
+                </div>
+
+                <!-- API BUGS -->
+                <div id="api-bugs" class="tab-content">
+                    <h2>API Bugs</h2>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">GET /users returns 500 when user ID contains special characters</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Send GET request to: /api/v1/users/test@123</li>
+                                <li>Observe the response</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> API should return 400 Bad Request with error message
+                            "Invalid user ID format"
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> API returns 500 Internal Server Error
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity medium">Medium</span> |
+                            <strong>Priority:</strong> <span class="bug-severity medium">Medium</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Production API, v1.2.3
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">POST /orders accepts negative quantity values</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Send POST request to /api/v1/orders</li>
+                                <li>Body: {"product_id": 123, "quantity": -5}</li>
+                                <li>Observe response</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> API should return 400 Bad Request with error "Quantity
+                            must be positive"
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> API returns 200 OK and creates order with -5 quantity
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity high">High</span> |
+                            <strong>Priority:</strong> <span class="bug-severity high">High</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Staging API, v2.0.1
+                        </div>
+                    </div>
+
+                    <div class="bug-example">
+                        <h4 class="bug-title">Response missing required field "created_at"</h4>
+
+                        <div class="bug-field">
+                            <strong>Steps to Reproduce:</strong>
+                            <ol>
+                                <li>Send GET request to /api/v1/posts/456</li>
+                                <li>Observe response body</li>
+                            </ol>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Expected Result:</strong> Response should include "created_at" field as per API
+                            documentation
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Actual Result:</strong> Response is missing "created_at" field. Other fields
+                            present: id, title, content, author
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Severity:</strong> <span class="bug-severity medium">Medium</span> |
+                            <strong>Priority:</strong> <span class="bug-severity medium">Medium</span>
+                        </div>
+
+                        <div class="bug-field">
+                            <strong>Environment:</strong> Production API, v1.5.0
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tips -->
+            <div class="card mt-xl">
+                <h3>💡 Tips for Writing Good Bug Reports</h3>
+                <ul>
+                    <li><strong>Be specific:</strong> Include exact steps, not vague descriptions</li>
+                    <li><strong>One bug per report:</strong> Don't mix multiple issues in one report</li>
+                    <li><strong>Include environment:</strong> Browser, OS, device, app version</li>
+                    <li><strong>Add screenshots/videos:</strong> Visual proof helps developers understand quickly</li>
+                    <li><strong>Write clear titles:</strong> "Login button not working" is better than "Button issue"
+                    </li>
+                    <li><strong>Test before reporting:</strong> Make sure it's reproducible, not a one-time glitch</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="interview.html">Interview</a></li>
+                <li><a href="manual-testing.html">Manual Testing</a></li>
+                <li><a href="api-testing.html">API Testing</a></li>
+            </ul>
+            <p class="footer-text">© 2026 QA Learning Hub. Built by QA professionals, for QA learners.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
